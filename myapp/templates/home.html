@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head><title>Головна</title></head>
-<body>
-    <h1>Ласкаво просимо!</h1>
+{% extends 'base.html' %}
+
+{% block title %}Головна сторінка{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Вітаємо на сайті!</h1>
+    <p class="text-center">Це головна сторінка вашого Django-проєкту.</p>
+
+    <h2>Головна</h2>
     <ul>
-        <li><a href="{% url 'view1' %}">View 1</a></li>
-        <li><a href="{% url 'view2' %}">View 2</a></li>
-        <li><a href="{% url 'view3' %}">View 3</a></li>
-        <li><a href="{% url 'view4' %}">View 4</a></li>
+        <li><a href="{% url 'view1' %}">Сторінка 1</a></li>
+        <li><a href="{% url 'view2' %}">Сторінка 2</a></li>
+        <li><a href="{% url 'view3' %}">Сторінка 3</a></li>
+        <li><a href="{% url 'view4' %}">Сторінка 4</a></li>
     </ul>
-</body>
-</html>
+{% endblock %}
